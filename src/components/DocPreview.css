@@ -1,0 +1,76 @@
+.doc-preview {
+  display: grid;
+  aspect-ratio: 1 / 1.41;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  color: black;
+  background-color: white;
+  text-align: start;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  min-width: 38rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 3;
+  gap: 0.75rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 16px;
+}
+
+.doc-logo {
+  display: inline;
+  width: 4rem;
+}
+
+.docfield {
+  display: flex;
+}
+
+.doc-preview p {
+  display: inline;
+  grid-column: 1 / 3;
+  width: 68ch;
+}
+
+.doc-preview h3 {
+  margin-top: 3rem;
+  grid-column: 1 / 3;
+  border-bottom: 1px solid black;
+}
+
+.doc-preview ul {
+  width: 100%;
+  grid-column: 1/ 3;
+  padding-inline-start: 20px;
+  margin-top: 0.5em;
+}
+
+.doc-preview small {
+  font-size: 0.75em;
+  text-align: end;
+}
+
+.docname {
+  width: fit-content;
+}
+
+.docvalue {
+  border-bottom: 1px dotted black;
+}
+
+#docfield-address {
+  margin-top: 12px;
+}
+#docfield-address + p {
+  font-size: 0.8rem;
+}
+
+@media print {
+  body {
+    size: A4;
+  }
+}
