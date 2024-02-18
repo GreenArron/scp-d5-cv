@@ -37,11 +37,11 @@ export default function DocPreview({
       <p>{bio}</p>
       <h3>Education</h3>
       <ul>
-        {educations.map(({ education, date }) => {
+        {educations.map((education) => {
           return (
             <li aria-label="degree">
               <span>{education}</span>
-              <small aria-label="acquired at date"> {date.toString()}</small>
+              <small aria-label="acquired at date"></small>
             </li>
           );
         })}
@@ -60,8 +60,10 @@ export default function DocPreview({
       <h3>Contact Info</h3>
       <span>📞 {phonenumber}</span>
       <span>📧 {email}</span>
-      <span id="docfield-address">Address:</span>
-      <p>{address}</p>
+      <div>
+        <div id="docfield-address">Address:</div>
+        <p>{address}</p>
+      </div>
     </section>
   );
 }

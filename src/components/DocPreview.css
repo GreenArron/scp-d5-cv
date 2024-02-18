@@ -3,7 +3,7 @@
   aspect-ratio: 1 / 1.41;
 
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 3fr 1fr 3fr 1fr repeat(5, 3fr) 4fr;
   color: black;
   background-color: white;
   text-align: start;
@@ -26,10 +26,6 @@
   width: 4rem;
 }
 
-.docfield {
-  display: flex;
-}
-
 .doc-preview p {
   display: inline;
   grid-column: 1 / 3;
@@ -37,7 +33,8 @@
 }
 
 .doc-preview h3 {
-  margin-top: 3rem;
+  margin: 0;
+  align-self: self-end;
   grid-column: 1 / 3;
   border-bottom: 1px solid black;
 }
@@ -55,17 +52,17 @@
 }
 
 .docname {
+  font-weight: 500;
+  font-size: 0.95rem;
   width: fit-content;
-}
-
-.docvalue {
-  border-bottom: 1px dotted black;
 }
 
 #docfield-address {
   margin-top: 12px;
+  font-weight: 600;
 }
 #docfield-address + p {
+  margin-left: 1ch;
   font-size: 0.8rem;
 }
 
