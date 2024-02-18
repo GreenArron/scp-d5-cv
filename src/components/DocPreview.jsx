@@ -37,21 +37,21 @@ export default function DocPreview({
       <p>{bio}</p>
       <h3>Education</h3>
       <ul>
-        {educations.map((education) => {
+        {educations.map(({ label, date, id }) => {
           return (
-            <li aria-label="degree">
-              <span>{education}</span>
-              <small aria-label="acquired at date"></small>
+            <li aria-label="degree" key={id}>
+              <span>{label}</span>
+              <small aria-label="acquired at date">{date.toString()}</small>
             </li>
           );
         })}
       </ul>
       <h3>Crime Background</h3>
       <ul>
-        {crimes.map(({ crime, date }) => {
+        {crimes.map(({ label, date, id }) => {
           return (
-            <li aria-label="crime">
-              <span>{crime}</span>
+            <li aria-label="crime" key={id}>
+              <span>{label}</span>
               <small aria-label="sentenced at date"> {date.toString()}</small>
             </li>
           );
