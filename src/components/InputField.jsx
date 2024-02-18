@@ -41,12 +41,19 @@ function Input({ placeholder, label, id, onChange, type = "text" }) {
 
 function ListInput({ label, id, placeholder, items, onAddItem }) {
   const [currentInput, setCurrentInput] = useState("");
+  const [date, setDate] = useState("");
   function handleChange(e) {
     setCurrentInput(e.target.value);
   }
+  function handleDateChange(e) {
+    setDate(e.target.value);
+  }
   function handleAdd() {
     if (currentInput.trim() !== "") {
-      items = [...items, currentInput];
+      items = [
+        ...items,
+        { label: currentInput, id: crypto.randomUUID(), date },
+      ];
       setCurrentInput("");
       onAddItem(items);
     }
@@ -56,14 +63,26 @@ function ListInput({ label, id, placeholder, items, onAddItem }) {
       <label htmlFor={id}>{label}</label>
       <input
         type="text"
+        name={id}
         id={id}
         placeholder={placeholder}
         onChange={handleChange}
         value={currentInput}
       />
+      <input
+        type="text"
+        name="date"
+        placeholder="2012 May 23"
+        onChange={handleDateChange}
+        value={date}
+      />
       <div id={`${id}collection`}>
-        {items.map((item) => {
-          return <div>{item}</div>;
+        {items.map(({ label, date, id }) => {
+          return (
+            <div key={id}>
+              {label} -- {date}
+            </div>
+          );
         })}
       </div>
       <button className="addtolist" onClick={handleAdd}>
