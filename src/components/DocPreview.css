@@ -47,8 +47,13 @@
 }
 
 .doc-preview small {
-  font-size: 0.75em;
+  margin-left: 2ch;
+  font-size: 0.7em;
   text-align: end;
+}
+
+.doc-preview small::before {
+  content: "- ";
 }
 
 .docname {
