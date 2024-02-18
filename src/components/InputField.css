@@ -65,3 +65,9 @@ button.addtolist {
 .list-item button.remove:focus {
   outline: white solid 2px;
 }
+
+@media print {
+  .inputfield {
+    display: none;
+  }
+}
