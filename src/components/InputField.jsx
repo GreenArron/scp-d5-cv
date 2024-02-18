@@ -48,6 +48,10 @@ function ListInput({ label, id, placeholder, items, onAddItem }) {
   function handleDateChange(e) {
     setDate(e.target.value);
   }
+  function handleRemove(id) {
+    items = items.filter((item) => item.id !== id);
+    onAddItem(items);
+  }
   function handleAdd() {
     if (currentInput.trim() !== "") {
       items = [
@@ -55,6 +59,7 @@ function ListInput({ label, id, placeholder, items, onAddItem }) {
         { label: currentInput, id: crypto.randomUUID(), date },
       ];
       setCurrentInput("");
+      setDate("");
       onAddItem(items);
     }
   }
@@ -72,15 +77,20 @@ function ListInput({ label, id, placeholder, items, onAddItem }) {
       <input
         type="text"
         name="date"
-        placeholder="2012 May 23"
+        placeholder="May 23, 2012"
         onChange={handleDateChange}
         value={date}
       />
       <div id={`${id}collection`}>
         {items.map(({ label, date, id }) => {
           return (
-            <div key={id}>
-              {label} -- {date}
+            <div key={id} className="list-item">
+              <span>
+                {label} -- {date}
+              </span>
+              <button onClick={() => handleRemove(id)} className="remove">
+                ✖
+              </button>
             </div>
           );
         })}

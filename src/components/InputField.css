@@ -1,6 +1,8 @@
 .inputfield {
   flex: 1;
   min-width: 18rem;
+  max-width: 80%;
+  min-height: 100vh;
   padding: 18px 0;
   display: flex;
   gap: 18px;
@@ -42,4 +44,24 @@ button.addtolist {
   width: 100%;
   border-radius: 2px;
   padding: 0.4rem 1.2rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-item button.remove {
+  padding: 4px;
+  background-color: unset;
+}
+
+.list-item button.remove:active {
+  padding: 4px;
+  border-radius: 12px;
+  background-color: hsl(0, 0%, 30%);
+}
+
+.list-item button.remove:focus {
+  outline: white solid 2px;
 }
