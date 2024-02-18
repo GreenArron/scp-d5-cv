@@ -39,6 +39,10 @@
   border-bottom: 1px solid black;
 }
 
+.doc-preview h3:last-of-type {
+  margin-bottom: 18px;
+}
+
 .doc-preview ul {
   width: 100%;
   grid-column: 1/ 3;
