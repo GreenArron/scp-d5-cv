@@ -26,10 +26,9 @@ h1 {
   line-height: 1.1;
 }
 
-input {
-  background-color: #2b2a33;
-}
+input,
 textarea {
+  color: #fff;
   background-color: #2b2a33;
 }
 
