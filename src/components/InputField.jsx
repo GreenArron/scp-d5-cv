@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import "./InputField.css";
+import printerIcon from "/printer.svg";
 
 function Input({ placeholder, label, id, onChange, type = "text" }) {
   function handleChange(e) {
@@ -118,16 +120,9 @@ export default function InputField({
   onEmailChange,
   onAddressChange,
 }) {
-  /*
-    name,
-  dob,
-  bio,
-  educations,
-  crimes,
-  phonenumber,
-  email,
-  address,
-    */
+  function handlePrint() {
+    window.print();
+  }
   return (
     <div className="inputfield">
       <Card>
@@ -189,6 +184,10 @@ export default function InputField({
           onAddItem={onCrimesChange}
         />
       </Card>
+
+      <button id="print" onClick={handlePrint}>
+        <img src={printerIcon} alt="Printer Icon" aria-label="Print document" />
+      </button>
     </div>
   );
 }
