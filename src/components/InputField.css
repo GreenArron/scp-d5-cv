@@ -24,6 +24,14 @@
   color: hsl(0, 0%, 65%);
 }
 
+.inputfield textarea {
+  padding: 4px;
+  font-size: 0.9rem;
+  resize: none;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+
 .inputcard {
   display: flex;
   flex-direction: column;

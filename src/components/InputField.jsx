@@ -18,7 +18,7 @@ function Input({ placeholder, label, id, onChange, type = "text" }) {
             id={id}
             placeholder={placeholder}
             onChange={handleChange}
-            rows="4"
+            rows="5"
           />
         </>
       );
