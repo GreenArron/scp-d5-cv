@@ -66,6 +66,16 @@ button.addtolist {
   outline: white solid 2px;
 }
 
+@media screen and (orientation: portrait) {
+  .inputfield {
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    max-height: 40vh;
+    overflow-y: scroll;
+  }
+}
+
 @media print {
   .inputfield {
     display: none;

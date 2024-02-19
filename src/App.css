@@ -10,3 +10,19 @@
 .preview-container {
   padding: 1.5rem;
 }
+
+@media screen and (orientation: portrait) {
+  #root {
+    flex-direction: column-reverse;
+    justify-content: start;
+    gap: 0;
+    width: 100vw;
+  }
+
+  .preview-container {
+    flex: 0 0 auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+    padding: 8px;
+  }
+}
