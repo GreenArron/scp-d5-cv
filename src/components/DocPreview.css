@@ -61,14 +61,9 @@
   content: "- ";
 }
 
-.docfield {
-  max-width: 40ch;
-}
-
 .docname {
   font-weight: 500;
   font-size: 1em;
-  word-wrap: break-word;
   width: fit-content;
 }
 
