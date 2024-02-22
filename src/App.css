@@ -5,6 +5,13 @@
   gap: 12rem;
   width: 90%;
   text-align: center;
+  transition: gap 100ms linear;
+}
+
+@media screen and (max-width: 1220px) {
+  #root {
+    gap: 4rem;
+  }
 }
 
 .preview-container {
