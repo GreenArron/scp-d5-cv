@@ -60,13 +60,19 @@ button.addtolist {
 }
 
 .list-item button.remove {
-  padding: 4px;
+  padding: 1px;
+  width: 3ch;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
   background-color: unset;
+}
+
+.list-item button.remove:hover {
+  border-color: unset;
 }
 
 .list-item button.remove:active {
   padding: 4px;
-  border-radius: 12px;
   background-color: hsl(0, 0%, 30%);
 }
 
